@@ -24,7 +24,7 @@ jobs:
 
     # Upload the built jar file so the next job can use it
     - name: Save Jar artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: java-app
         path: target/*.jar
@@ -39,7 +39,7 @@ jobs:
 
     # Download the jar file we built in Job 1
     - name: Download Jar artifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: java-app
         path: target/
